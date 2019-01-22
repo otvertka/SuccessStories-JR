@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+
+    <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp"
+            tools:context=".details.DetailsPostsFragment">
+
+
+        <TextView
+                android:id="@+id/det_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                tools:text="Заколовок"/>
+
+        <ImageView
+                android:id="@+id/det_main_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:maxHeight="214dp"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/ic_launcher_background"
+        />
+
+        <TextView
+                android:id="@+id/det_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="CONTENT"
+                android:isScrollContainer="true"
+                android:layout_marginTop="8dp"
+        />
+        <!--
+                <com.example.dda.successstories.ZoomTextView
+
+                        android:id="@+id/det_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="CONTENT"
+                />
+        -->
+
+
+    </LinearLayout>
+
+</ScrollView>

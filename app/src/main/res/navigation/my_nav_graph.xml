@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/my_nav_graph"
+            app:startDestination="@id/listStoriesFragment">
+
+    <fragment android:id="@+id/listStoriesFragment"
+              android:name="com.example.dda.successstories.list.ListStoriesFragment"
+              android:label="Истории успеха"
+              tools:layout="@layout/list_stories_fragment">
+        <action android:id="@+id/toDetailsStoriesFragment"
+                app:destination="@+id/detailsStoriesFragment" app:enterAnim="@anim/nav_default_enter_anim"
+                app:exitAnim="@anim/nav_default_exit_anim" app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+                app:popExitAnim="@anim/nav_default_pop_exit_anim" app:popUpTo="@+id/listStoriesFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/detailsStoriesFragment"
+              android:name="com.example.dda.successstories.details.DetailsStoriesFragment"
+              android:label="История успеха">
+        <argument android:name="title" app:argType="string" app:nullable="true" android:defaultValue="Зыголовок"/>
+        <argument android:name="imageUrl" app:argType="string" app:nullable="true" android:defaultValue="photo"/>
+        <argument android:name="content" app:argType="string" app:nullable="true" android:defaultValue="CONTENT"/>
+    </fragment>
+</navigation>
